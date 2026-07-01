@@ -1,0 +1,57 @@
+name: Pipeline DevOps Aula
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: ls -la
+
+  validation:
+    runs-on: ubuntu-latest
+
+    needs: setup
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+
+          if [ ! -f index.html ]; then
+            echo "Erro!"
+            exit 1
+          fi
+
+      - run: echo "Arquivo encontrado"
+
+  build:
+    runs-on: ubuntu-latest
+
+    needs: validation
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+
+          mkdir dist
+
+          cp index.html dist/
+
+      - run: ls -la dist
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - run: echo "Cloudflare fará o deploy."
