@@ -2,14 +2,137 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>DevOps na Prática</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Vernet | Links</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#121212;
+            color:#fff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        .container{
+            width:100%;
+            max-width:480px;
+            text-align:center;
+        }
+
+        .profile-img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            border:3px solid #00fff2;
+            object-fit:cover;
+            margin-bottom:20px;
+        }
+
+        h1{
+            font-size:30px;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#bdbdbd;
+            margin-bottom:35px;
+            line-height:1.5;
+        }
+
+        .links-wrapper{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+        }
+
+        .link-btn{
+            text-decoration:none;
+            color:white;
+            background:#1e1e1e;
+            padding:16px;
+            border-radius:30px;
+            border:1px solid #333;
+            transition:.3s;
+            font-weight:bold;
+            font-size:17px;
+        }
+
+        .link-btn:hover{
+            background:#00fff2;
+            color:#121212;
+            transform:translateY(-3px);
+        }
+
+        footer{
+            margin-top:35px;
+            color:#777;
+            font-size:14px;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<h1>Atualização automática funcionando!</h1>
+<div class="container">
 
-<p>Deploy automático com GitHub Actions + Cloudflare Pages.</p>
+    <img
+        class="profile-img"
+        src="https://avatars.githubusercontent.com/jeanvernet"
+        alt="Jean Vernet">
+
+    <h1>Jean Vernet</h1>
+
+    <p>
+        Estudante de Sistemas de Informação<br>
+        Desenvolvedor Full Stack<br>
+        Node.js • React • Docker • PostgreSQL
+    </p>
+
+    <div class="links-wrapper">
+
+        <a class="link-btn"
+           href="https://github.com/jeanvernet"
+           target="_blank">
+            💻 GitHub
+        </a>
+
+        <a class="link-btn"
+           href="https://www.linkedin.com/"
+           target="_blank">
+            💼 LinkedIn
+        </a>
+
+        <a class="link-btn"
+           href="mailto:jeanphilippe2000@gmail.com">
+            ✉️ Contato
+        </a>
+
+        <a class="link-btn"
+           href="https://pages.cloudflare.com/"
+           target="_blank">
+            🚀 Projeto hospedado no Cloudflare Pages
+        </a>
+
+    </div>
+
+    <footer>
+        Projeto da disciplina de DevOps<br>
+        CI/CD com GitHub Actions + Cloudflare Pages
+    </footer>
+
+</div>
 
 </body>
 </html>
